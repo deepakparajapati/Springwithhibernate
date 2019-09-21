@@ -1,0 +1,39 @@
+Basic REST Services using Spring Boot Starter Web
+Annotations
+********************************************************************************
+@SpringBootApplication
+@EnableAutoConfiguration
+
+
+@Required
+@Autowired
+@Qualifier
+@Configuration
+@Bean
+@Lazy
+@Value
+@Component
+@Service
+@Repository
+
+@RequestMapping
+@CookieValue	
+@Transactional
+=================================================================================================
+1.@Controller:
+	@Controller annotation tells the Spring IOC container to treat this class as Spring MVC controller.
+2.@RequestMapping:
+	@RequestMapping annotation use to map URLs such as /appointments onto an entire class or a particular handler method. 		Typically the class-level annotation maps a specific request path (or path pattern) onto a form controller,
+3.@RequestParam: @requestParam annotation is used for access to specific Servlet request parameters. Parameter values are 			converted to the declared method argument type.
+		(Example: http://localhost:5555/byTrainNumber/?number=12368)
+4.@PathVariable: @PathVariable annotation on a method argument to bind it to the value of a URI template variable:
+		(Example: http://localhost:5555/byTrainNumber/12368)
+5.@RequestBody : @RequestBody annotation used to access to the HTTP request body. Parameter values are converted to the 			declared method argument type using HttpMessageConverters
+6.@ModelAttribute: A ModelAndView object, with the model implicitly enriched with command objects and the results of 			@ModelAttribute annotated reference data accessor methods.
+===================================================================================================
+7.@ResponseBody : Spring treats the result of the method as the response itself.
+8.@RestController : @Controller + @ResponseBody
+===================================================================================================
+9.@Service : Indicates that an annotated class is a "Service", originally defined by Domain-Driven Design (Evans, 2003) as "an 		operation offered as an interface that stands alone in the model, with no encapsulated state."
+10.@Component: The @Component annotation marks a java class as a bean so the component-scanning mechanism of spring can pick 		it up and pull it into the application context(IOC). 
+11.@Repository: Although above use of @Component is good enough but we can use more suitable annotation that provides 		additional benefits specifically for DAOs i.e. @Repository annotation. The @Repository annotation is a 		specialization of the @Component annotation with similar use and functionality.
